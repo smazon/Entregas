@@ -1,0 +1,8 @@
+O Modelo V [2] é um modelo conceitual de Engenharia de Sistemas/Desenvolvimento de Produto visto como melhoria ao problema de reatividade do modelo em cascata. Ele permite que, durante a integração de um sistema em seus diversos níveis, os testes sejam feitos contra os próprios requisitos do componente/interface que está sendo testado(a), em contraste com modelos anteriores onde o componente era testado contra a especificação do componente/interface. Notar a diferença entre requisito e especificação.
+O Modelo V virou um padrão da indústria de software depois de 1980 e, após o surgimento da Engenharia de Sistemas, tornou-se um conceito padrão em todos os domínios da indústria. O mundo do software tinha feito poucos avanços em termos de maturidade, em achar na bibliografia corrente as referências que poderiam se aplicar ao sistema.
+
+
+    Os testes têm resultados de maior efetividade, uma vez que são testados contra requisitos e não contra especificações;
+    Este modelo possibilita que se encontre erros durante os processos de se derivar especificações de requisitos;
+    Ajuda a desenvolver novos requisitos;
+    Melhora a qualidade do produto resultante, uma vez que valida o processo de engenharia de sistemas durante a integração do sistema.
