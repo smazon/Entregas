@@ -1,0 +1,7 @@
+3.4 o Que é o Watchdog timer e seu uso?
+O Watchdog Timer, abreviadamente WDT, é um dispositivo de tempo que provoca um reset no uC quando o tempo programado expira.
+O WTD serve para reiniciar o programa de tempos em tempos, seja pelo fato dele poder travar durante a execução ou entrar 
+em loop infinito ou qualquer outra razão que se tenha para manter o programa sempre ativo.
+O WDT é ativado e desativado pelos bits de configuração e, em alguns uC, isso pode ser feito no software.
+O WDT possui um oscilador independente do oscilador do uC, com um período de timeout configurável em milissegundos a segundos, 
+e pode ficar ativo durante o modo sleep.

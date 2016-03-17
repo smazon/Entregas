@@ -1,0 +1,5 @@
+3.3 O que é Brownout?
+O BrownOut  é utilizado para reiniciar a CPU automaticamente quando a tensão de alimentação cair abaixo de um nível seguro para a operação do circuito; 
+deste modo, no momento de reset, a CPU executará as instruções a partir do vetor de reset (0x000 do código).
+ O BrownOut deve ser habilitado nos bits de configurações do uC, e dependendo dos uC os níveis de tensão seguros de operação em uC são fixos, 
+ou selecionados pelo usuário.

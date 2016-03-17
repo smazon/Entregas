@@ -1,0 +1,2 @@
+3.1 Quais são as memórias internas do uC  ATSAM4SD32C e seus tamanhos?
+O uC estudado contém 2MB de memória Flash, 160KB de memória SRAM, e 2KB de memória Cache integrada.
