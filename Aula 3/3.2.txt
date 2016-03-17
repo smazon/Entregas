@@ -1,0 +1,2 @@
+3.2 Qual a corrente máxima suportada de entrada (IOH) e de saída (IOL)?
+A corrente máxima suportada pelo IOH e IOL é de 30 mA.

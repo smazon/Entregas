@@ -1,0 +1,5 @@
+3.5 decreva as funcionalidades do PIO:
+
+Os PIOs servem para gerar uma liberdade ao usuário de fazer leitura e enviar sinais pelo uC.
+Pode-se configurar os PIOS para que o uC tenha acesso a sensores, e envie sinais de controle, 
+como no caso, por exemplo,do controle da velocidade de rotação de um motor.

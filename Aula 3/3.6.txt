@@ -1,0 +1,3 @@
+3.6 Pesquise nos fornecedores o valor de mercado desse chip:
+Fazendo a pesquisa em alguns fornecedores encontrou-se o valor médio de 13 Euros (R$ 56,00 reais) 
+para a compra somente do chip ATSAM4SD32C.
