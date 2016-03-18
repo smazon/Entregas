@@ -34,6 +34,11 @@
 #define PIN_LED_BLUE 19
 #define PIN_LED_GREEN 20
 #define PIN_LED_RED 20
+#define n=30
+
+
+
+void function(int id, int pin, Pio * port);
 /**
  * Main function
  * 1. configura o clock do sistema
@@ -58,11 +63,8 @@ int main (void)
 	*/
 	WDT->WDT_MR = WDT_MR_WDDIS;
 		
-	// 29.17.4 PMC Peripheral Clock Enable Register 0
-	// 1: Enables the corresponding peripheral clock.
-	// ID_PIOA = 11 - TAB 11-1
 	
-	
+	/*
 	PMC->PMC_PCER0 |= ID_PIOA | ID_PIOC; // initializing the peripherals
 
 	 //31.6.1 PIO Enable Register
@@ -88,10 +90,16 @@ int main (void)
 	// 		1 : Sets the data to be driven on the I/O line.
 	// 		0 : do nothing
 	
-
+    */
+	
+	
 	/**
 	*	Loop infinito
 	*/
+	function(ID_PIOA, PIN_LED_BLUE, PIOA);
+	function(ID_PIOA, PIN_LED_GREEN, PIOA);
+	function(ID_PIOC, PIN_LED_RED, PIOC);
+
 		while(1){
 
             /*
@@ -112,6 +120,15 @@ int main (void)
 			delay_ms(300);
 	}
 }
-
+void function(int id, int pin, Pio * port) {
+	// 29.17.4 PMC Peripheral Clock Enable Register 0
+	// 1: Enables the corresponding peripheral clock.
+	// ID_PIOA = 11 - TAB 11-1
+	
+	PMC->PMC_PCER0 = id;
+	port-> PIO_PER = (1 << pin );
+	port->PIO_WPMR = 0;
+	port->PIO_OER |=  (1 << pin );
+}
 
 
