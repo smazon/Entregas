@@ -80,7 +80,7 @@ int main (void)
 	// value = 
 	// 		1 : Sets the data to be driven on the I/O line.
 	// 		0 : do nothing
-	PIOA->PIO_SODR = (1 << PIN_LED_BLUE );
+	PIOA->PIO_CODR = (1 << PIN_LED_BLUE ); // sets the output to 0 and then the blue led is turned on
 
 	/**
 	*	Loop infinito

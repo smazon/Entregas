@@ -1130,7 +1130,7 @@ int main (void)
 	// value = 
 	// 		1 : Sets the data to be driven on the I/O line.
 	// 		0 : do nothing
-	PIOA->PIO_CODR = (1 << PIN_LED_BLUE );
+	PIOA->PIO_CODR = (1 << PIN_LED_BLUE ); // sets the output to 0 and then the blue led is turned on
   4005b0:	f44f 2200 	mov.w	r2, #524288	; 0x80000
   4005b4:	635a      	str	r2, [r3, #52]	; 0x34
              * Utilize a função delay_ms para fazer o led piscar na frequência
