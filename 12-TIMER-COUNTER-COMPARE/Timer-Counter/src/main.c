@@ -18,6 +18,7 @@
 
 #include "asf.h"
 
+
 #define PIN_PUSHBUTTON_1_MASK	PIO_PB3
 #define PIN_PUSHBUTTON_1_PIO	PIOB
 #define PIN_PUSHBUTTON_1_ID		ID_PIOB
@@ -35,40 +36,78 @@
 
 #define Freq_Init_Blink 4	//Hz
 
+/**mascaras*/
+#define PIN_LED_BLUE	19
+#define PIN_LED_RED		20
+#define PIN_LED_GREEN	20
+#define PIN_BUTTON		3
+#define PIN_BUTTON_1	12	
+#define time			100
+
+/** 
+ * Definição dos ports
+ * Ports referentes a cada pino
+ */
+#define PORT_LED_BLUE	PIOA
+#define PORT_LED_GREEN	PIOA
+#define PORT_LED_RED	PIOC
+#define PORT_BUT_2		PIOB
+#define PORT_BUT_1		PIOC
+
+/**
+ * Define os IDs dos periféricos associados aos pinos
+ */
+#define ID_LED_BLUE		ID_PIOA
+#define ID_LED_GREEN	ID_PIOA
+#define ID_LED_RED		ID_PIOC
+#define ID_BUT_2		ID_PIOB
+#define ID_BUT_1		ID_PIOC
+
+/**
+ *	Define as masks utilziadas
+ */
+#define MASK_LED_BLUE	(1u << PIN_LED_BLUE)
+#define MASK_LED_GREEN	(1u << PIN_LED_GREEN)
+#define MASK_LED_RED	(1u << PIN_LED_RED)
+#define MASK_BUT_2		(1u << PIN_BUTTON)
+#define MASK_BUT_1		(1u << PIN_BUTTON_1)
+
+
 /**
  *  Handle Interrupcao botao 1
  */
 static void Button1_Handler(uint32_t id, uint32_t mask)
-{
-	
+{	
+	tc_write_rc(TC0,0,tc_read_rc(TC0,0)*0.9);	
 }
 
 /**
  *  Handle Interrupcao botao 2.
  */
+ 
 static void Button2_Handler(uint32_t id, uint32_t mask)
-{
-	
+{	
+	tc_write_rc(TC0,0,tc_read_rc(TC0,0)*1.1);	
 }
 
 /**
  *  Interrupt handler for TC0 interrupt. 
  */
+ 
 void TC0_Handler(void)
 {
+
 	volatile uint32_t ul_dummy;
+	ul_dummy = tc_get_status(TC0,0);
 
-    /****************************************************************
-	* Devemos indicar ao TC que a interrupção foi satisfeita.
-    ******************************************************************/
-	//ul_dummy = tc_get_status();
-
-	/* Avoid compiler warning */
-	UNUSED(ul_dummy);
-
-	/** Muda o estado do LED */
-
+	if (PORT_LED_GREEN->PIO_ODSR & MASK_LED_GREEN)
+		pio_clear(PIOA, MASK_LED_GREEN);
+	else
+		pio_set(PIOA, MASK_LED_GREEN);
+    
 }
+
+
 
 /**
  *  \brief Configure the Pushbuttons
@@ -77,28 +116,40 @@ void TC0_Handler(void)
  *  pressed or released.
  */
 static void configure_buttons(void)
-{
-
+{	
+	pmc_enable_periph_clk(ID_BUT_2);
+	pmc_enable_periph_clk(ID_BUT_1);
+	pio_set_input(PORT_BUT_2, MASK_BUT_2, PIO_PULLUP | PIO_DEBOUNCE);
+	pio_set_input(PORT_BUT_1, MASK_BUT_1, PIO_PULLUP | PIO_DEBOUNCE);
+	pio_set_debounce_filter(PORT_BUT_2, MASK_BUT_2, 20);
+	pio_set_debounce_filter(PORT_BUT_1, MASK_BUT_1, 20);
+	pio_handler_set(PORT_BUT_2, ID_BUT_2, MASK_BUT_2, PIO_IT_FALL_EDGE , Button1_Handler );
+	pio_handler_set(PORT_BUT_1, ID_BUT_1, MASK_BUT_1, PIO_IT_FALL_EDGE , Button2_Handler );
+	pio_enable_interrupt(PORT_BUT_2, MASK_BUT_2);
+	pio_enable_interrupt(PORT_BUT_1, MASK_BUT_1);
+	NVIC_SetPriority((IRQn_Type) ID_PIOB, 2);
+	NVIC_SetPriority((IRQn_Type) ID_PIOC, 2);
+	NVIC_EnableIRQ(ID_BUT_2);
+	NVIC_EnableIRQ(ID_BUT_1);	
+		
 }
 
-/**
- *  \brief Configure the LEDs
- *
- */
+
 static void configure_leds(void)
-{
-
+{	
+	pmc_enable_periph_clk(ID_LED_BLUE);
+	pio_set_output(PORT_LED_GREEN , MASK_LED_GREEN  ,1,0,0);
 }
 
 
 
-
-/**
- *  Configure Timer Counter 0 to generate an interrupt every 250ms.
- */
-// [main_tc_configure]
 static void configure_tc(void)
-{
+{	
+	/****************************************************************
+	* Devemos indicar ao TC que a interrupção foi satisfeita.
+    ******************************************************************/
+	
+// [main_tc_configure]
 	/*
 	* Aqui atualizamos o clock da cpu que foi configurado em sysclk init
 	*
@@ -115,7 +166,7 @@ static void configure_tc(void)
     * 
 	*
 	*****************************************************************/
-	//pmc_enable_periph_clk();
+	pmc_enable_periph_clk(ID_TC0);
 
 	/*****************************************************************
 	* Configura TC para operar no modo de comparação e trigger RC
@@ -127,6 +178,7 @@ static void configure_tc(void)
 	* Cada TC possui 3 canais, escolher um para utilizar.
 	*
     * No nosso caso :
+	
     * 
 	*	MCK		= 120_000_000
 	*	SLCK	= 32_768		(rtc)
@@ -141,7 +193,7 @@ static void configure_tc(void)
     *   2 - Canal a ser configurado (0,1,2)
     *   3 - Configurações do TC :
     *
-    *   Configurações de modo de operação :
+    * 	* Configurações de modo de operação :
 	*	    TC_CMR_ABETRG  : TIOA or TIOB External Trigger Selection 
 	*	    TC_CMR_CPCTRG  : RC Compare Trigger Enable 
 	*	    TC_CMR_WAVE    : Waveform Mode 
@@ -154,7 +206,7 @@ static void configure_tc(void)
 	*	    TC_CMR_TCCLKS_TIMER_CLOCK5 : Clock selected: internal SLCK clock signal 
 	*
 	*****************************************************************/
-	//tc_init();
+	tc_init(TC0, 0, TC_CMR_CPCTRG | TC_CMR_TCCLKS_TIMER_CLOCK5);
     
     /*****************************************************************
 	* Configura valor trigger RC
@@ -181,7 +233,7 @@ static void configure_tc(void)
     *   2 - Canal a ser configurado (0,1,2)
     *   3 - Valor para trigger do contador (RC)
     *****************************************************************/
-    //tc_write_rc();
+    tc_write_rc(TC0,0,32768/4);
 	
 	/*****************************************************************
 	* Configura interrupção no TC
@@ -202,19 +254,13 @@ static void configure_tc(void)
 	*	        TC_IER_LDRBS : 	RB Loading 
 	*	        TC_IER_ETRGS : 	External Trigger 
 	*****************************************************************/
-	//tc_enable_interrupt();
+	tc_enable_interrupt(TC0,0,TC_IER_CPCS);
     
     /*****************************************************************
-	* Ativar interrupção no NVIC
-    *****************************************************************
-    *
-    * Devemos configurar o NVIC para receber interrupções do TC 
-    *
-    * Parametros :
-    *   1 - ID do periférico
-	*****************************************************************/
-	//NVIC_EnableIRQ();
-
+	* Ativar interrupção no NVIC*/
+	
+       
+    NVIC_EnableIRQ(ID_TC0);
     
     /*****************************************************************
 	* Inicializa o timer
@@ -224,13 +270,15 @@ static void configure_tc(void)
     *   1 - TC
     *   2 - Canal
 	*****************************************************************/
-    //tc_start();
+    tc_start(TC0,0);
+
+
+	/************************************************************************/
+	/* Main Code	 
+	                                                       */
+	/************************************************************************/
 }
 
-
-/************************************************************************/
-/* Main Code	                                                        */
-/************************************************************************/
 int main(void)
 {
 	/* Initialize the SAM system */
@@ -250,8 +298,7 @@ int main(void)
 
     
 	while (1) {
-		
 		/* Entra em modo sleep */
-		
+		pmc_sleep(SAM_PM_SMODE_SLEEP_WFI);
 	}
 }
