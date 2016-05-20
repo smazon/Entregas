@@ -1,7 +1,7 @@
 src/ili93xx_example.d src/ili93xx_example.o: ../src/ili93xx_example.c \
  ../src/asf.h ../src/ASF/sam/drivers/adc/adc.h \
  ../src/ASF/sam/utils/compiler.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h \
  ../src/ASF/common/utils/parts.h \
  ../src/ASF/sam/utils/preprocessor/preprocessor.h \
  ../src/ASF/sam/utils/preprocessor/tpaste.h \
@@ -11,12 +11,12 @@ src/ili93xx_example.d src/ili93xx_example.o: ../src/ili93xx_example.c \
  ../src/ASF/sam/utils/header_files/io.h \
  ../src/ASF/sam/utils/cmsis/sam4s/include/sam4s.h \
  ../src/ASF/sam/utils/cmsis/sam4s/include/sam4sd32c.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h \
  ../src/ASF/thirdparty/CMSIS/Include/core_cm4.h \
  ../src/ASF/thirdparty/CMSIS/Include/core_cmInstr.h \
  ../src/ASF/thirdparty/CMSIS/Include/core_cmFunc.h \
@@ -83,25 +83,25 @@ src/ili93xx_example.d src/ili93xx_example.o: ../src/ili93xx_example.c \
  ../src/ASF/sam/utils/cmsis/sam4s/include/instance/instance_rtc.h \
  ../src/ASF/sam/utils/cmsis/sam4s/include/instance/instance_gpbr.h \
  ../src/ASF/sam/utils/cmsis/sam4s/include/pio/pio_sam4sd32c.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\cdefs.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdarg.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdbool.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\stdlib.h \
- c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\alloca.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\cdefs.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdarg.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdbool.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\stdlib.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\alloca.h \
  ../src/ASF/common/utils/interrupt.h \
  ../src/ASF/common/utils/interrupt/interrupt_sam_nvic.h \
  ../src/ASF/sam/utils/status_codes.h \
@@ -131,7 +131,12 @@ src/ili93xx_example.d src/ili93xx_example.o: ../src/ili93xx_example.c \
  ../src/ASF/common/services/serial/sam_uart/uart_serial.h \
  ../src/ASF/sam/drivers/uart/uart.h ../src/ASF/sam/drivers/usart/usart.h \
  ../src/config/conf_uart_serial.h ../src/ASF/sam/drivers/tc/tc.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h \
+ ../src/ASF/thirdparty/CMSIS/Include/arm_math.h \
+ ../src/ASF/thirdparty/CMSIS/Include/core_cm4.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\string.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h \
+ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h
 
 ../src/asf.h:
 
@@ -139,7 +144,7 @@ src/ili93xx_example.d src/ili93xx_example.o: ../src/ili93xx_example.c \
 
 ../src/ASF/sam/utils/compiler.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stddef.h:
 
 ../src/ASF/common/utils/parts.h:
 
@@ -159,17 +164,17 @@ c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-n
 
 ../src/ASF/sam/utils/cmsis/sam4s/include/sam4sd32c.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdint.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdint.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_default_types.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\features.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_intsup.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_stdint.h:
 
 ../src/ASF/thirdparty/CMSIS/Include/core_cm4.h:
 
@@ -303,43 +308,43 @@ c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi
 
 ../src/ASF/sam/utils/cmsis/sam4s/include/pio/pio_sam4sd32c.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\newlib.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\config.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\ieeefp.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\cdefs.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\cdefs.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdarg.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdarg.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\reent.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\_ansi.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\_types.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\_types.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\lock.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdbool.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\lib\gcc\arm-none-eabi\4.9.3\include\stdbool.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdlib.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\stdlib.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\stdlib.h:
 
-c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\alloca.h:
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\alloca.h:
 
 ../src/ASF/common/utils/interrupt.h:
 
@@ -412,3 +417,13 @@ c:\program\ files\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi
 ../src/ASF/sam/drivers/tc/tc.h:
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
+
+../src/ASF/thirdparty/CMSIS/Include/arm_math.h:
+
+../src/ASF/thirdparty/CMSIS/Include/core_cm4.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\string.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\string.h:
+
+c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\math.h:
