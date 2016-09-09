@@ -99,7 +99,7 @@ void TC0_Handler(void){
   if(namostra > resolucao)
 	namostra = 0;
 
-  ySeno = sin(deltaTeta*namostra)*((float)max_digital)/MAX_AMPLITUDE_ANAG;
+  ySeno = (sin(deltaTeta*namostra)+1)*((float)max_digital)/MAX_AMPLITUDE_ANAG;
   dacc_write_conversion_data(DACC_BASE, ySeno);
 
   namostra++;
